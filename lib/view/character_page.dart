@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controller/character_controller.dart';
-//import '../service/auth_service.dart';
+import '../service/auth_service.dart';
 //import 'character_detail_page.dart';
 //import 'spell_page.dart';
 
@@ -15,12 +15,12 @@ class CharacterPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Harry Potter Characters'),
-        // actions: [
-        //   IconButton(
-        //     icon: const Icon(Icons.logout),
-        //     onPressed: AuthService.logout,
-        //   ),
-        // ],
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: AuthService.logout,
+          ),
+        ],
       ),
       body: Obx(() {
         if (controller.isLoading) {
