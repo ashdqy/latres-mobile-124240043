@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'view/character_page.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'view/login_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  await Hive.openBox('favorites');
   runApp(const MainApp());
 }
 
@@ -13,7 +17,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CharacterPage(),
+      home: const LoginPage(),
     );
   }
 }

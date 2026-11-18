@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../controller/character_controller.dart';
 import '../service/auth_service.dart';
 //import 'character_detail_page.dart';
-//import 'spell_page.dart';
+import 'spell_page.dart';
 
 class CharacterPage extends StatelessWidget {
   CharacterPage({super.key});
@@ -46,15 +46,15 @@ class CharacterPage extends StatelessWidget {
           },
         );
       }),
-      // bottomNavigationBar: Padding(
-      //   padding: const EdgeInsets.all(8),
-      //   child: SafeArea(
-      //     child: ElevatedButton(
-      //       onPressed: () => Get.off(() => SpellPage()),
-      //       child: const Text('Spells'),
-      //     ),
-      //   ),
-      // ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8),
+        child: SafeArea(
+          child: ElevatedButton(
+            onPressed: () => Get.off(() => SpellPage()),
+            child: const Text('Spells'),
+          ),
+        ),
+      ),
     );
   }
 }
