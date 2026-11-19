@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import '../model/spell.dart';
 import '../service/api_service.dart';
-//import '../service/notification_service.dart';
+import '../service/notification_service.dart';
 
 class SpellController extends GetxController {
   final ApiService _apiService = ApiService();
@@ -71,14 +71,14 @@ class SpellController extends GetxController {
     }
   }
 
-  // tombol hapus di halaman Favorite Spell
-//   Future<void> removeFavorite(Spell spell) async {
-//     _box.delete(spell.index);
-//     _favorites.removeWhere((item) => item.index == spell.index);
+  //tombol hapus di halaman Favorite Spell
+  Future<void> removeFavorite(Spell spell) async {
+    _box.delete(spell.index);
+    _favorites.removeWhere((item) => item.index == spell.index);
 
-//     await NotificationService().showInstantNotification(
-//       title: 'Delete notification',
-//       body: 'You deleted ${spell.spell} from fav list!',
-//     );
-//   }
+    await NotificationService().showInstantNotification(
+      title: 'Delete notification',
+      body: 'You deleted ${spell.spell} from fav list!',
+    );
+  }
  }

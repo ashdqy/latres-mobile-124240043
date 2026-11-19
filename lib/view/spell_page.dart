@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../controller/spell_controller.dart';
 import '../service/auth_service.dart';
 import 'character_page.dart';
-//import 'favorite_page.dart';
+import 'favorite_page.dart';
 
 class SpellPage extends StatelessWidget {
   SpellPage({super.key});
@@ -50,10 +50,10 @@ class SpellPage extends StatelessWidget {
           },
         );
       }),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () => Get.to(() => FavoritePage()),
-      //   child: const Icon(Icons.favorite, color: Colors.red),
-      // ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Get.to(() => FavoritePage()),
+        child: const Icon(Icons.favorite, color: Colors.red),
+      ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8),
         child: SafeArea(
