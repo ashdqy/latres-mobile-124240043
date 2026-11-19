@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controller/character_controller.dart';
 import '../service/auth_service.dart';
-//import 'character_detail_page.dart';
+import 'character_detail_page.dart';
 import 'spell_page.dart';
 
 class CharacterPage extends StatelessWidget {
@@ -38,9 +38,9 @@ class CharacterPage extends StatelessWidget {
                 ),
                 title: Text(character.fullName),
                 subtitle: Text(character.interpretedBy),
-                // onTap: () {
-                //   Get.to(() => CharacterDetailPage(character: character));
-                // },
+                onTap: () {
+                  Get.to(() => CharacterDetailPage(character: character));
+                },
               ),
             );
           },
